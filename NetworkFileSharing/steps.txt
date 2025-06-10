@@ -1,0 +1,112 @@
+📁 How to Share Files Over a Network on Windows
+(Host: Windows , Receiver: Windows)
+✅ Step 1: Connect to the Same Network
+Make sure all devices (PCs or laptops) are connected to the same Wi-Fi or LAN network.
+
+✅ Step 2: Enable Network Discovery and File Sharing
+Open Control Panel → go to Network and Sharing Center
+
+Click on Change advanced sharing settings (on the left)
+
+Under Private network:
+
+Turn on Network discovery
+
+Turn on File and printer sharing
+
+Scroll down to All Networks section:
+
+Turn off password-protected sharing (optional for easier access)
+
+OR keep it on for security (requires username/password)
+
+Click Save changes.
+
+✅ Step 3: Share a Folder
+Right-click the folder you want to share → Click Properties
+
+Go to the Sharing tab → Click Share…
+
+In the new window:
+
+Select Everyone from the dropdown
+
+Click Add
+
+Set permission level (Read / Read/Write)
+
+Click Share → Note the Network Path shown (e.g., \\YourPC\SharedFolder)
+
+Click Done
+
+✅ Advanced sharing (optional):
+In the Sharing tab → click Advanced Sharing...
+Check “Share this folder” and configure permissions as needed.
+
+✅ Step 4: Access the Shared Folder from Another Windows PC
+On another Windows PC connected to the same network:
+
+Press Windows + R → type the network path:
+
+Copy
+Edit
+\\YourPC\SharedFolder
+Or browse:
+
+Open File Explorer → Click Network on the left pane
+
+Double-click the PC that shared the folder
+
+Open the folder
+
+If prompted:
+
+Enter the username and password of the sharing PC
+
+OR access directly if "password-protected sharing" is off
+
+✅ Bonus: Map as Network Drive
+To access it like a regular folder:
+
+Right-click This PC → Map network drive
+
+Choose a drive letter
+
+Enter the folder path (e.g., \\YourPC\SharedFolder)
+
+Check Reconnect at sign-in
+
+Click Finish
+
+
+(Host:Windows , Receiver: Ubuntu)
+
+✅ Step-by-Step Guide: Access Windows Shared Folder from Ubuntu
+📌 Prerequisites:
+Windows machine has shared a folder (as explained above)
+
+Ubuntu machine is on the same Wi-Fi/LAN network
+
+Windows and Ubuntu can ping each other
+
+🧭 Option 1: Use Ubuntu File Manager (GUI Way)
+Open Files (the file explorer) on Ubuntu
+
+Press Ctrl + L or click the address bar
+
+Type the following and press Enter:
+
+php-template
+Copy
+Edit
+smb://<Windows_IP>/<SharedFolderName>
+Example:
+
+cpp
+Copy
+Edit
+smb://192.168.1.5/SharedDocs
+If prompted, enter Windows username and password
+(leave blank if the shared folder allows guest access)
+
+The shared folder will open. You can copy files to/from it like a normal folder.
