@@ -1,0 +1,103 @@
+.chatroom-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.chatroom-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chatroom-messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 10px; /* avoid scrollbar overlap */
+}
+
+.chatroom-message {
+  background-color: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin: 5px 0;
+  max-width: 70%;
+  word-break: break-word;
+  text-align: left; /* text always aligned left inside bubble */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.chatroom-message.current-user {
+  background-color: #d1f0ff;
+  margin-left: auto; /* push bubble to the right */
+  text-align: left; /* text inside bubble still left-aligned */
+}
+
+.userinfo {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.userinfo.current-user {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.usermessage {
+  white-space: pre-wrap; /* preserve line breaks and indentation */
+  text-align: left; /* always left align text inside bubble */
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.chatroom-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chatroom-input {
+  flex-grow: 1;
+  padding: 10px;
+  resize: vertical;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  min-height: 60px;
+}
+
+.chatroom-send-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chatroom-send-button:hover {
+  background-color: #0056b3;
+}
+
+.chatroom-download-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.chatroom-download-button:hover {
+  background-color: #555;
+}
